@@ -52,7 +52,7 @@ jobs:
             --task-definition ${{env.ECS_TASK_DEFINATION}} \
             --query taskDefinition > task-definition.json
 
-        #Fill in the new image ID in the Amazon ECS task definition
+        #Fill in the new image ID in the Amazon ECS task definitiond
       - name: Fill in the new image ID in the Amazon ECS task definition
         id: task-def
         uses: aws-actions/amazon-ecs-render-task-definition@v1
