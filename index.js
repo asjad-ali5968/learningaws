@@ -6,7 +6,7 @@ app.use(express.json());
 
 app.get("/health", async (req, res) => {
   res.status(200).json({
-    message: "this route is healthy",
+    message: "this route is healthy wealthy and wise",
   });
 });
 
