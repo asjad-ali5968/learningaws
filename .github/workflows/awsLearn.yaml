@@ -2,7 +2,7 @@ name: deploy to aws
 
 on:
   push:
-    branch:
+    branches:
       - main
 
 env:
