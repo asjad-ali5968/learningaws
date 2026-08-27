@@ -9,7 +9,7 @@ env:
   AWS_REGION: ap-south-1
   ECS_CLUSTER: cicd-node-app-ecs
   ECS_TASK_DEFINATION: cicd-task-defination-node
-  ECS_SERVICES: cicd-task-defination-node-service-8nkplu1c
+  ECS_SERVICES: cicd-task-defination-node-service-86odmzo7
   ECR_REPOSITORY: icd-node-app
 
 jobs:
@@ -52,7 +52,7 @@ jobs:
             --task-definition ${{env.ECS_TASK_DEFINATION}} \
             --query taskDefinition > task-definition.json
 
-        #Fill in the new image ID in the Amazon ECS task definitiond
+        #Fill in the new image ID in the Amazon ECS task definition
       - name: Fill in the new image ID in the Amazon ECS task definition
         id: task-def
         uses: aws-actions/amazon-ecs-render-task-definition@v1
